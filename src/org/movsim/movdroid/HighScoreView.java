@@ -31,6 +31,9 @@ import java.util.Locale;
 import org.movsim.movdroid.util.HighscoreEntry;
 import org.movsim.movdroid.util.HighscoreEntry.Quantity;
 
+import com.elsewhat.movdroid.R;
+
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -40,9 +43,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockActivity;
 
-public class HighScoreView extends SherlockActivity {
+
+public class HighScoreView extends Activity {
 
     /**
      * This static class holds the Views in the rows of the ListView, so that

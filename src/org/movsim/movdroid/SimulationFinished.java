@@ -33,6 +33,8 @@ import org.movsim.movdroid.util.FormatUtil;
 import org.movsim.movdroid.util.HighscoreEntry;
 import org.movsim.movdroid.util.ViewProperties;
 
+import com.elsewhat.movdroid.R;
+
 import android.content.Intent;
 import android.content.res.Resources;
 

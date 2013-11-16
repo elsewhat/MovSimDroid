@@ -52,6 +52,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.SubMenu;
 import com.actionbarsherlock.view.Window;
+import com.elsewhat.movdroid.R;
 
 import de.mindpipe.android.logging.log4j.LogConfigurator;
 

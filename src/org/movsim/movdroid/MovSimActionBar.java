@@ -39,6 +39,7 @@ import android.widget.ArrayAdapter;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.MenuItem;
+import com.elsewhat.movdroid.R;
 
 public class MovSimActionBar {
     private Resources res;

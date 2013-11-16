@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MovSim</string>
+    <string name="app_name">MovSim Experiments</string>
     <string name="onFirstBoot_title">MovSim</string>
     <string name="onFirstBoot_accept">Start</string>
     <string name="introduction_text">\n\n

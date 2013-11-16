@@ -25,12 +25,14 @@
  */
 package org.movsim.movdroid;
 
+import com.elsewhat.movdroid.R;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockActivity;
 
-public class InfoDialog extends SherlockActivity {
+public class InfoDialog extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -25,7 +25,8 @@
  */
 package org.movsim.movdroid.util;
 
-import org.movsim.movdroid.R;
+
+import com.elsewhat.movdroid.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
