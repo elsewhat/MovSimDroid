@@ -36,7 +36,9 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RectShape;
+import android.util.Log;
 import android.view.Display;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -62,7 +64,7 @@ import android.view.WindowManager;
  * drawing the foreground and background) are deferred to a subclass.
  * </p>
  */
-public abstract class ViewBase extends View {
+public abstract class ViewBase extends SurfaceView {
 
     protected Integer androidVersion;
 
@@ -239,6 +241,7 @@ public abstract class ViewBase extends View {
      */
     @Override
     protected void onDraw(Canvas canvas) {
+    	Log.v(VIEW_LOG_TAG, "onDraw");
         assert backgroundBitmap != null;
         // blit the previously drawn background bitmap
         canvas.drawBitmap(backgroundBitmap, 0, 0, paint);
@@ -248,7 +251,19 @@ public abstract class ViewBase extends View {
         drawForeground(canvas);
     }
 
-    /**
+	public void doDraw(Canvas canvas) {
+    	
+        assert backgroundBitmap != null;
+        // blit the previously drawn background bitmap
+        canvas.drawBitmap(backgroundBitmap, 0, 0, paint);
+        // and then draw the simulation
+        canvas.scale(scale, scale);
+        canvas.translate(xOffset, yOffset);
+        drawForeground(canvas);
+        
+	}
+
+	/**
      * <p>
      * Draw the background bitmap for the view.
      * </p>
