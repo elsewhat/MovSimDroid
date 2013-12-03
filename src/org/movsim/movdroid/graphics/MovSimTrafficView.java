@@ -321,11 +321,13 @@ public class MovSimTrafficView extends ViewBase implements
 			drawSlopes(canvas);
 		}
 
+		drawRoadSegments(canvas);
+		
+		//Draw ids after the actual roads
 		if (drawRoadId) {
 			drawRoadSectionIds(canvas);
 		}
 
-		drawRoadSegments(canvas);
 	}
 
 	/**
