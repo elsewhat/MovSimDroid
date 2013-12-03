@@ -65,6 +65,23 @@
                 <INHOMOGENEITY x="200" alpha_T="1." alpha_v0="1" />
             </FLOW_CONSERVING_INHOMOGENEITIES>
         </ROAD>
+        
+         <ROAD id="10" logging="false">
+            <TRAFFIC_COMPOSITION>
+                <VEHICLE_TYPE label="ACC1" fraction="0.7" relative_v0_randomization="0.2" route_label="" />
+                <VEHICLE_TYPE label="ACC2" fraction="0.3" relative_v0_randomization="0.2" route_label="" />
+            </TRAFFIC_COMPOSITION>
+            <TRAFFIC_SOURCE logging="false">
+                <INFLOW t="0" q_per_hour="0" v="20" />
+                <INFLOW t="60" q_per_hour="1800" v="20" />
+                <INFLOW t="120" q_per_hour="1800" v="20" />
+                <INFLOW t="180" q_per_hour="0" v="20" />
+            </TRAFFIC_SOURCE>
+            <FLOW_CONSERVING_INHOMOGENEITIES>
+                <INHOMOGENEITY x="0" alpha_T="0.8" alpha_v0="1" />
+                <INHOMOGENEITY x="200" alpha_T="1." alpha_v0="1" />
+            </FLOW_CONSERVING_INHOMOGENEITIES>
+        </ROAD>
         <OUTPUT />
     </SIMULATION>
 </SCENARIO>
