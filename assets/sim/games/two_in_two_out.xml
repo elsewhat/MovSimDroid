@@ -36,7 +36,7 @@
             <LANE_CHANGE_MODEL eur_rules="true" crit_speed_eur="20">
                 <MOBIL b_safe="20.0" s_min="2.0" threshold="0.2" bias_right="0.0" politeness="0.1" />
             </LANE_CHANGE_MODEL>
-        </VEHICLE>
+        </VEHICLE>        
         <VEHICLE label="Obstacle" length="0" width="4.4" b_max="10000" reaction_time="0" consumption="none">
             <LONGITUDINAL_MODEL>
                 <IDM v0="0" T="1" s0="2" a="1.0" b="1.5" s1="0" delta="4" />
@@ -64,24 +64,41 @@
                 <INHOMOGENEITY x="0" alpha_T="0.8" alpha_v0="1" />
                 <INHOMOGENEITY x="200" alpha_T="1." alpha_v0="1" />
             </FLOW_CONSERVING_INHOMOGENEITIES>
+            <TRAFFIC_LIGHTS n_dt="1" logging="false">
+                <!-- zero time period means that light will not change automatically from that color -->
+                <!-- negative time period means that light will not use that color -->
+                <!-- ordinal numbers of TrafficLightStatus are GREEN=0, GREEN_RED=1, RED=2, RED_GREEN=3 -->
+                <TRAFFIC_LIGHT x="390" green_time="0" green_red_time="-1" red_time="0" red_green_time="-1" phase_shift="0" init="0" />
+            </TRAFFIC_LIGHTS>
         </ROAD>
         
          <ROAD id="10" logging="false">
             <TRAFFIC_COMPOSITION>
-                <VEHICLE_TYPE label="ACC1" fraction="0.7" relative_v0_randomization="0.2" route_label="" />
-                <VEHICLE_TYPE label="ACC2" fraction="0.3" relative_v0_randomization="0.2" route_label="" />
+                <VEHICLE_TYPE label="ACC1" fraction="0.5" relative_v0_randomization="0.2" route_label="" />
+                <VEHICLE_TYPE label="ACC2" fraction="0.5" relative_v0_randomization="0.2" route_label="" />
             </TRAFFIC_COMPOSITION>
             <TRAFFIC_SOURCE logging="false">
                 <INFLOW t="0" q_per_hour="0" v="20" />
-                <INFLOW t="60" q_per_hour="1800" v="20" />
-                <INFLOW t="120" q_per_hour="1800" v="20" />
+                <INFLOW t="20" q_per_hour="1200" v="20" />
+                <INFLOW t="120" q_per_hour="500" v="20" />
+                <INFLOW t="150" q_per_hour="100" v="20" />
                 <INFLOW t="180" q_per_hour="0" v="20" />
+                
             </TRAFFIC_SOURCE>
             <FLOW_CONSERVING_INHOMOGENEITIES>
                 <INHOMOGENEITY x="0" alpha_T="0.8" alpha_v0="1" />
                 <INHOMOGENEITY x="200" alpha_T="1." alpha_v0="1" />
             </FLOW_CONSERVING_INHOMOGENEITIES>
+            <TRAFFIC_LIGHTS n_dt="1" logging="false">
+                <!-- zero time period means that light will not change automatically from that color -->
+                <!-- negative time period means that light will not use that color -->
+                <!-- ordinal numbers of TrafficLightStatus are GREEN=0, GREEN_RED=1, RED=2, RED_GREEN=3 -->
+                <TRAFFIC_LIGHT x="385" green_time="0" green_red_time="-1" red_time="0" red_green_time="-1" phase_shift="0" init="2" />
+            </TRAFFIC_LIGHTS>
         </ROAD>
+        
+
+        
         <OUTPUT />
     </SIMULATION>
 </SCENARIO>

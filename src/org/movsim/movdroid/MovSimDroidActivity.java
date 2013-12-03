@@ -174,13 +174,9 @@ public class MovSimDroidActivity extends SherlockActivity implements OnNavigatio
         if (menu != null) {
             menu.getItem(0).setIcon(R.drawable.ic_action_start).setTitle(R.string.start);
             
-            // Set visibility of interaction button
-            if (itemPosition == 0 || itemPosition == 1) {
-                menu.getItem(2).setVisible(true);
-            } else {
-                menu.getItem(2).setVisible(false);
-            }
-            
+            //interaction menu should always be visible
+            //menu.getItem(2).setVisible(true);
+
         }
         return true;
     }
