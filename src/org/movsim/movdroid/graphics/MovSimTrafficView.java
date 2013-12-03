@@ -171,14 +171,15 @@ public class MovSimTrafficView extends ViewBase implements
 	public void updateDrawing(double arg0) {
 		//Log.v("MovSim", "Update view with delta " + arg0);
 		//postInvalidate();
-		Lock drawingLock = new ReentrantLock();
+		/*Lock drawingLock = new ReentrantLock();
 		if(drawingLock.tryLock()){
 			//Log.v("MovSim", "Drawing frame");
 			repaint();
 			drawingLock.unlock();
 		}else {
 			Log.v("MovSim", "Skipping frame");
-		}
+		}*/
+		repaint();
 		
 	}
 
